@@ -139,6 +139,12 @@ table {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%)
+      saturate(5863%) hue-rotate(212deg) brightness(102%) contrast(96%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -146,10 +152,31 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
+  color: var(--text-color);
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1182,6 +1209,87 @@ a {
   .gy-xxl-5 {
     --grid-gutter-y: 90px;
   }
+}
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  padding: 30px 0;
+  background-color: #eee;
+}
+
+.navbar {
+  margin-left: 144px;
+  margin-right: auto;
+}
+.navbar__list {
+  column-gap: 30px;
+}
+.navbar__link {
+  color: #1a162e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  column-gap: 6px;
+}
+.navbar__arrow-down {
+  margin-top: 2px;
+}
+
+.top-act {
+  column-gap: 20px;
+}
+.top-act__group {
+  min-width: 50px;
+  height: 50px;
+  justify-content: center;
+  column-gap: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.top-act__group:nth-child(2) {
+  padding: 0 20px;
+}
+.top-act__btn {
+  justify-content: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+.top-act__title {
+  color: #1a162e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.top-act__separate {
+  width: 1px;
+  height: 30px;
+  background: #ededf6;
+}
+.top-act__avatar {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  cursor: pointer;
+}
+.logo__title {
+  color: #1a162e;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
 }
 
 /*# sourceMappingURL=main.css.map */
