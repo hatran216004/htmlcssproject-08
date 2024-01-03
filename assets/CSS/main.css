@@ -139,12 +139,6 @@ table {
   box-sizing: border-box;
 }
 
-:root {
-  --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%)
-      saturate(5863%) hue-rotate(212deg) brightness(102%) contrast(96%);
-}
-
 html {
   font-size: 62.5%;
 }
@@ -166,6 +160,7 @@ button {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -1217,7 +1212,7 @@ button {
 
 .header {
   padding: 30px 0;
-  background-color: #eee;
+  background-color: var(--header-background);
 }
 
 .navbar {
@@ -1228,7 +1223,6 @@ button {
   column-gap: 30px;
 }
 .navbar__link {
-  color: #1a162e;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
@@ -1247,8 +1241,8 @@ button {
   justify-content: center;
   column-gap: 20px;
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--top-act-group-bg);
+  box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 }
 .top-act__group:nth-child(2) {
   padding: 0 20px;
@@ -1259,7 +1253,6 @@ button {
   cursor: pointer;
 }
 .top-act__title {
-  color: #1a162e;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
@@ -1267,7 +1260,7 @@ button {
 .top-act__separate {
   width: 1px;
   height: 30px;
-  background: #ededf6;
+  background: var(--top-act-separate);
 }
 .top-act__avatar {
   cursor: pointer;
@@ -1286,10 +1279,29 @@ button {
   cursor: pointer;
 }
 .logo__title {
-  color: #1a162e;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 145.455%;
+}
+
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%)
+      saturate(5863%) hue-rotate(212deg) brightness(102%) contrast(96%);
+  --header-background: #eee;
+  --top-act-group-bg: #fff;
+  --top-act-group-shadow: rgba(237, 237, 246, 0.2);
+  --top-act-separate: #ededf6;
+}
+
+html.dark {
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+      saturate(2832%) hue-rotate(356deg) brightness(117%) contrast(100%);
+  --header-background: #171c28;
+  --top-act-group-bg: #292e39;
+  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+  --top-act-separate: #ededf6;
 }
 
 /*# sourceMappingURL=main.css.map */
