@@ -11,7 +11,7 @@
         margin-left: 50px;
     }
 
-    @include abstract.breakpoint(sm) {
+    @include abstract.breakpoint(md) {
         margin-left: 0;
     }
 
