@@ -8,15 +8,42 @@
 .header {
     padding: 30px 0;
     background-color: var(--header-background);
+
+    @include abstract.breakpoint(lg) {
+        padding: 20px 0;
+    }
+
+    @include abstract.breakpoint(sm) {
+        padding: 16px 0;
+    }
 }
 
 .top-bar {
     @extend %flex-center;
+
+    @include abstract.breakpoint(sm) {
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: none;
+
+        @include abstract.breakpoint(lg) {
+            display: block;
+        }
+    }
 }
 
 .navbar {
     margin-left: 144px;
-    margin-right: auto;
+
+    @include abstract.breakpoint(xl) {
+        margin-left: 50px;
+    }
+
+    @include abstract.breakpoint(lg) {
+        display: none;
+    }
 
     &__list {
         @extend %flex-center;
@@ -39,6 +66,11 @@
 .top-act {
     @extend %flex-center;
     column-gap: 20px;
+    margin-left: auto;
+
+    @include abstract.breakpoint(sm) {
+        margin-left: 0;
+    }
 
     &__group {
         min-width: 50px;
@@ -49,6 +81,16 @@
         border-radius: 8px;
         background: var(--top-act-group-bg);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+
+        @include abstract.breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__group:first-child {
+        @include abstract.breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__group:nth-child(2) {
