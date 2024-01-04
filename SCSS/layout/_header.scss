@@ -20,6 +20,7 @@
 
 .top-bar {
     @extend %flex-center;
+    position: relative;
 
     @include abstract.breakpoint(sm) {
         justify-content: space-between;
@@ -47,13 +48,29 @@
 
     &__list {
         @extend %flex-center;
-        column-gap: 30px;
+    }
+
+    &__item {
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:first-child .navbar__link {
+            padding-left: 0;
+        }
+
+        &:last-child .navbar__link {
+            padding-right: 0;
+        }
     }
 
     &__link {
+        padding: 0 15px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+        height: 50px;
         @extend %flex-center;
         column-gap: 6px;
     }
