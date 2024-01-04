@@ -5,9 +5,7 @@
     left: 0;
     padding-top: 54px;
     width: min(1240px, 100%);
-    // opacity: 0;
-    // visibility: hidden;
-    transition: opacity 0.25s, visibility 0.25s;
+    // display: none;
 
     &__inner {
         --inner-padding: 30px;
@@ -83,7 +81,7 @@
 
     &__heading {
         display: block;
-        margin-top: 5px;
+        margin-top: 4px;
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
@@ -95,8 +93,8 @@
     }
 
     &__link {
-        display: block;
         padding: 7px 0;
+        display: block;
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
@@ -104,31 +102,32 @@
     }
 
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             opacity: 1;
             visibility: visible;
         }
 
+        &--active > .menu-column__link,
         &:hover > .menu-column__link {
             color: #0071dc;
             font-weight: 500;
         }
-    }
 
-    &__item:last-child .menu-column__link {
-        padding-bottom: 0;
+        &:last-child > .menu-column__link {
+            padding-bottom: 0;
+        }
     }
 }
 
 .sub-menu {
     display: grid;
-    // opacity: 0;
-    // visibility: hidden;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
     padding-left: var(--inner-padding);
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
 
     &__column {
