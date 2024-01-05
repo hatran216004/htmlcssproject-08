@@ -1208,6 +1208,92 @@ button {
     --grid-gutter-y: 90px;
   }
 }
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (max-width: 1399.98px) {
+  .d-xxl-block {
+    display: block !important;
+  }
+  .d-xxl-flex {
+    display: flex !important;
+  }
+  .d-xxl-grid {
+    display: grid !important;
+  }
+  .d-xxl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .d-xl-block {
+    display: block !important;
+  }
+  .d-xl-flex {
+    display: flex !important;
+  }
+  .d-xl-grid {
+    display: grid !important;
+  }
+  .d-xl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-grid {
+    display: grid !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-flex {
+    display: flex !important;
+  }
+  .d-md-grid {
+    display: grid !important;
+  }
+  .d-md-none {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-flex {
+    display: flex !important;
+  }
+  .d-sm-grid {
+    display: grid !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+}
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -1235,14 +1321,6 @@ button {
 @media (max-width: 767.98px) {
   .top-bar {
     justify-content: space-between;
-  }
-}
-.top-bar__menu {
-  display: none;
-}
-@media (max-width: 991.98px) {
-  .top-bar__menu {
-    display: block;
   }
 }
 
@@ -1273,12 +1351,8 @@ button {
     visibility: visible;
   }
 }
-.navbar__close-btn {
-  display: none;
-}
 @media (max-width: 991.98px) {
   .navbar__close-btn {
-    display: block;
     padding: 10px 40px;
   }
 }
@@ -1354,16 +1428,6 @@ button {
   border-radius: 8px;
   background: var(--top-act-group-bg);
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-}
-@media (max-width: 767.98px) {
-  .top-act__group {
-    display: none;
-  }
-}
-@media (max-width: 991.98px) {
-  .top-act__group:first-child {
-    display: none;
-  }
 }
 .top-act__group:nth-child(2) {
   padding: 0 20px;
