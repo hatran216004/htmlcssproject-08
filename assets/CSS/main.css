@@ -1339,21 +1339,33 @@ button {
     z-index: 10;
     margin-left: 0;
     padding: 20px 0;
-    background-color: #fff;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--sidebar-bg);
     translate: -100% 0;
     transition: translate 0.3s;
   }
   .navbar.show {
     translate: 0 0;
+    box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
   }
   .navbar.show ~ .navbar__overlay {
     opacity: 1;
     visibility: visible;
   }
 }
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
+  }
+}
 @media (max-width: 991.98px) {
   .navbar__close-btn {
     padding: 10px 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__close-btn {
+    padding: 0 20px 10px;
   }
 }
 .navbar__overlay {
@@ -1374,7 +1386,17 @@ button {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
-    height: calc(100% - 28px);
+    height: calc(100% - 40px);
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 140px);
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__list {
+    height: calc(100% - 120px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1405,6 +1427,12 @@ button {
     font-size: 1.6rem;
     line-height: 150%;
     justify-content: space-between;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__link {
+    padding: 0 20px;
+    height: 44px;
   }
 }
 .navbar__arrow-down {
@@ -1464,6 +1492,29 @@ button {
   display: block;
   border-radius: 8px;
   box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+}
+
+.nav-btn {
+  height: 50px;
+  padding: 0 40px;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .nav-btn {
+    padding: 0 20px;
+    height: 44px;
+  }
+}
+.nav-btn__title, .nav-btn__qnt {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.nav-btn__title {
+  margin-left: 16px;
+}
+.nav-btn__qnt {
+  margin-left: auto;
 }
 
 .logo {
@@ -1679,8 +1730,8 @@ button {
 
 :root {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%)
-      saturate(5863%) hue-rotate(212deg) brightness(102%) contrast(96%);
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(5863%) hue-rotate(212deg) brightness(102%)
+      contrast(96%);
   --body-bg: #f6f6f6;
   --header-background: #eee;
   --top-act-group-bg: #fff;
@@ -1689,6 +1740,8 @@ button {
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
+  --sidebar-bg: #fff;
+  --sidebar-shadow: rgba(200, 200, 200, 0.4);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -1699,22 +1752,23 @@ button {
 
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
-      saturate(2832%) hue-rotate(356deg) brightness(117%) contrast(100%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2832%) hue-rotate(356deg)
+      brightness(117%) contrast(100%);
   --body-bg: #292e39;
   --header-background: #171c28;
   --top-act-group-bg: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-separate: #ededf6;
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(29%)
-      saturate(398%) hue-rotate(185deg) brightness(97%) contrast(91%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(29%) saturate(398%) hue-rotate(185deg)
+      brightness(97%) contrast(91%);
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --top-menu-border-color: #171c28;
   --menu-column-link-color: #b9babe;
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
-      sepia(84%) saturate(744%) hue-rotate(180deg) brightness(105%)
-      contrast(97%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(744%) hue-rotate(180deg)
+      brightness(105%) contrast(97%);
+  --sidebar-bg: #292e39;
+  --sidebar-shadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
