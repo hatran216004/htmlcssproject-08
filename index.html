@@ -24,13 +24,34 @@
         <script>
             load("#header", "./template/header.html");
         </script>
-        <div class="container">
-            <main style="height: 7000px"></main>
-            <!-- Footer -->
-            <footer id="footer"></footer>
-            <script>
-                load("#footer", "./template/footer.html");
-            </script>
-        </div>
+
+        <main class="container" style="height: 7000px">
+            <!-- Slideshow -->
+            <div class="slideshow">
+                <div class="slideshow__inner">
+                    <div class="slideshow__item">
+                        <img src="./assets/images/sildeshow/banner-img.png" alt="" class="slideshow__img" />
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/images/sildeshow/banner-img.png" alt="" class="slideshow__img" />
+                    </div>
+                    <div class="slideshow__item">
+                        <img src="./assets/images/sildeshow/banner-img.png" alt="" class="slideshow__img" />
+                    </div>
+                </div>
+
+                <div class="slideshow__page">
+                    <span class="slideshow__number">1</span>
+                    <span class="slideshow__slider"></span>
+                    <span class="slideshow__number">5</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
     </body>
 </html>
