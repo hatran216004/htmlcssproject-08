@@ -1384,6 +1384,12 @@ button {
   .navbar__item {
     width: 100%;
   }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
 }
 .navbar__link {
   padding: 0 15px;
@@ -1407,7 +1413,11 @@ button {
 @media (max-width: 991.98px) {
   .navbar__arrow-down {
     rotate: -90deg;
+    transition: rotate 0.25s;
   }
+}
+.navbar__item--active .navbar__arrow-down {
+  rotate: 0deg;
 }
 
 .top-act {
@@ -1499,7 +1509,6 @@ button {
 @media (max-width: 991.98px) {
   .dropdown {
     position: initial;
-    display: block;
     padding-top: 0;
   }
 }
