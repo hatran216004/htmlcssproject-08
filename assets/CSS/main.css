@@ -1661,6 +1661,12 @@ button {
   visibility: visible;
   height: var(--max-inner-height);
 }
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
 
 :root {
   --text-color: #1a162e;

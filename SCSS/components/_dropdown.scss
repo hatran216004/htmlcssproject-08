@@ -182,5 +182,10 @@
         opacity: 1;
         visibility: visible;
         height: var(--max-inner-height);
+
+        @include abstract.breakpoint(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
     }
 }
