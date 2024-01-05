@@ -1342,7 +1342,7 @@ button {
     border-radius: 0px 20px 20px 0px;
     background-color: var(--sidebar-bg);
     translate: -100% 0;
-    transition: translate 0.3s;
+    transition: translate 0.5s;
   }
   .navbar.show {
     translate: 0 0;
@@ -1386,6 +1386,7 @@ button {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
+    overscroll-behavior: contain;
     height: calc(100% - 40px);
   }
 }
@@ -1588,6 +1589,11 @@ button {
   }
   .dropdown__inner::before {
     content: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 20px;
   }
 }
 
