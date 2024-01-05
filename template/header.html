@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- Menu -->
-        <button class="top-bar__menu">
+        <button class="top-bar__menu js-toggle" toggle-target="#navbar">
             <img src="./assets/icons/menu.svg" alt="" class="top-bar__menu--icon icon" />
         </button>
 
@@ -11,7 +11,11 @@
             <h1 class="logo__title">grocerymart</h1>
         </a>
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="./assets/icons/arrow-left.svg" alt="Back" />
+            </button>
+
             <ul class="navbar__list js-dropdown-list">
                 <!-- Item 1 -->
                 <li class="navbar__item">
@@ -4566,6 +4570,8 @@
                 </li>
             </ul>
         </nav>
+        <!-- Overlay -->
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
         <!-- Action -->
         <div class="top-act">
             <div class="top-act__group">

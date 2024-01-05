@@ -44,16 +44,70 @@
     }
 
     @include abstract.breakpoint(lg) {
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 10;
+
+        margin-left: 0;
+        padding: 20px 0;
+        background-color: #fff;
+
+        translate: -100% 0;
+        transition: translate 0.3s;
+
+        &.show {
+            translate: 0 0;
+        }
+
+        &.show ~ &__overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__close-btn {
         display: none;
+
+        @include abstract.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.3s;
+
+        @include abstract.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 9;
+
+            background-color: rgba($color: #000000, $alpha: 0.4);
+        }
     }
 
     &__list {
         @extend %flex-center;
+
+        @include abstract.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
         &:hover .dropdown {
             display: block;
+        }
+
+        @include abstract.breakpoint(lg) {
+            &:hover .dropdown {
+                display: none;
+            }
+
+            width: 100%;
         }
     }
 
@@ -65,10 +119,21 @@
         height: 50px;
         @extend %flex-center;
         column-gap: 6px;
+
+        @include abstract.breakpoint(lg) {
+            padding: 0 40px;
+            font-size: 1.6rem;
+            line-height: 150%;
+            justify-content: space-between;
+        }
     }
 
     &__arrow-down {
         margin-top: 2px;
+
+        @include abstract.breakpoint(lg) {
+            rotate: -90deg;
+        }
     }
 }
 
