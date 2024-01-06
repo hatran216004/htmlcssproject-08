@@ -11,7 +11,7 @@
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-separate: #ededf6;
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
         --header-background: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }

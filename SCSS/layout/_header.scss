@@ -9,12 +9,12 @@
     padding: 30px 0;
     background-color: var(--header-background);
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
         box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
         padding: 20px 0;
     }
 
-    @include abstract.breakpoint(sm) {
+    @include abstract.screen(sm) {
         padding: 16px 0;
     }
 }
@@ -24,7 +24,7 @@
     position: relative;
     z-index: 1;
 
-    @include abstract.breakpoint(md) {
+    @include abstract.screen(md) {
         justify-content: space-between;
     }
 }
@@ -32,11 +32,11 @@
 .navbar {
     margin-left: 129px;
 
-    @include abstract.breakpoint(xl) {
+    @include abstract.screen(xl) {
         margin-left: 28px;
     }
 
-    @include abstract.breakpoint(lg) {
+    @include abstract.screen(lg) {
         position: fixed;
         inset: 0 50% 0 0;
         z-index: 10;
@@ -60,16 +60,16 @@
         }
     }
 
-    @include abstract.breakpoint(sm) {
+    @include abstract.screen(sm) {
         inset: 0 20% 0 0;
     }
 
     &__close-btn {
-        @include abstract.breakpoint(lg) {
+        @include abstract.screen(lg) {
             padding: 10px 40px;
         }
 
-        @include abstract.breakpoint(sm) {
+        @include abstract.screen(sm) {
             padding: 0 20px 10px;
         }
     }
@@ -79,7 +79,7 @@
         opacity: 0;
         transition: visibility 0.3s, opacity 0.3s;
 
-        @include abstract.breakpoint(lg) {
+        @include abstract.screen(lg) {
             position: fixed;
             inset: 0;
             z-index: 9;
@@ -91,7 +91,7 @@
     &__list {
         @extend %flex-center;
 
-        @include abstract.breakpoint(lg) {
+        @include abstract.screen(lg) {
             flex-direction: column;
             align-items: flex-start;
 
@@ -100,11 +100,11 @@
             height: calc(100% - 40px);
         }
 
-        @include abstract.breakpoint(md) {
+        @include abstract.screen(md) {
             height: calc(100% - 140px);
         }
 
-        @include abstract.breakpoint(sm) {
+        @include abstract.screen(sm) {
             height: calc(100% - 120px);
         }
     }
@@ -114,7 +114,7 @@
             display: block;
         }
 
-        @include abstract.breakpoint(lg) {
+        @include abstract.screen(lg) {
             width: 100%;
 
             &:hover .dropdown {
@@ -136,14 +136,14 @@
         @extend %flex-center;
         column-gap: 6px;
 
-        @include abstract.breakpoint(lg) {
+        @include abstract.screen(lg) {
             padding: 0 40px;
             font-size: 1.6rem;
             line-height: 150%;
             justify-content: space-between;
         }
 
-        @include abstract.breakpoint(sm) {
+        @include abstract.screen(sm) {
             padding: 0 20px;
             height: 44px;
         }
@@ -152,7 +152,7 @@
     &__arrow-down {
         margin-top: 2px;
 
-        @include abstract.breakpoint(lg) {
+        @include abstract.screen(lg) {
             rotate: -90deg;
             transition: rotate 0.25s;
         }
@@ -168,7 +168,7 @@
     column-gap: 20px;
     margin-left: auto;
 
-    @include abstract.breakpoint(md) {
+    @include abstract.screen(md) {
         margin-left: 0;
     }
 
@@ -222,7 +222,7 @@
     padding: 0 40px;
     align-items: center;
 
-    @include abstract.breakpoint(sm) {
+    @include abstract.screen(sm) {
         padding: 0 20px;
         height: 44px;
     }
