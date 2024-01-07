@@ -26,11 +26,15 @@ button {
     font-size: inherit;
     color: inherit;
     cursor: pointer;
-    background-color: transparent;
     border: none;
     outline: none;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
+}
+
+input,
+button {
+    background-color: transparent;
 }
 
 a {
