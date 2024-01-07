@@ -25,21 +25,17 @@ button {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
     outline: none;
+    padding: 0;
     -webkit-tap-highlight-color: transparent;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-}
-
-button {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 0;
 }
 
 .icon {
