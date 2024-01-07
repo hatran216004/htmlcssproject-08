@@ -38,3 +38,47 @@
         margin-top: 8px;
     }
 }
+
+//Buttons
+.btn {
+    border-radius: 6px;
+    padding: 0 20px;
+
+    height: 46px;
+    background-color: #f8f8fb;
+    font-size: 1.8rem;
+    font-weight: 500;
+    user-select: none;
+
+    & + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        background-color: transparent;
+        color: #9e9da8;
+        font-weight: 400;
+    }
+
+    &--primary {
+        background-color: #ffb700;
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &--disable {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}

@@ -6,13 +6,20 @@
 .filter {
     position: absolute;
     right: 0;
-    top: 66px;
+    top: 55px;
     z-index: 1;
 
     padding: 30px;
     border-radius: 20px;
     background-color: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+
+    &__arrow {
+        position: absolute;
+        height: 24px;
+        top: -16px;
+        right: 22px;
+    }
 
     &__heading,
     &__form-label {
@@ -172,5 +179,17 @@
         width: 1px;
         margin: 0 30px;
         background-color: #eee;
+    }
+
+    &__footer {
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    &__cancle,
+    &__submit {
+        height: 38px;
+        padding: 0 10px;
+        font-size: 1.4rem;
     }
 }
