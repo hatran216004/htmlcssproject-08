@@ -1,3 +1,7 @@
+@use "../abstract";
+
+$error-color: #ed4337;
+
 .form {
     &:has(:invalid) &__submit-btn {
         opacity: 0.5;
@@ -7,6 +11,10 @@
     &__group {
         margin-top: 30px;
 
+        @include abstract.screen(md) {
+            margin-top: 20px;
+        }
+
         &--inline {
             display: flex;
             align-items: center;
@@ -15,7 +23,7 @@
 
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
         .form__text-input {
-            border-color: red;
+            border-color: $error-color;
         }
 
         .form__error,
@@ -33,14 +41,14 @@
         font-size: 1.4rem;
         margin-top: 10px;
         font-weight: 500;
-        color: red;
+        color: $error-color;
         display: none;
     }
 
     &__input-icon--error {
         margin-left: 12px;
         display: none;
-        animation: shake 0.8s;
+        animation: shake 0.5s;
     }
 
     &__text-input {
@@ -53,6 +61,10 @@
         border-radius: 10px;
         border: 1px solid var(--form-text-input-border-color);
 
+        @include abstract.screen(md) {
+            height: 48px;
+        }
+
         &:focus-within {
             border-color: #77dae6;
         }
@@ -64,6 +76,10 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstract.screen(md) {
+            font-size: 1.6rem;
+        }
 
         &::placeholder {
             color: var(--form-input-placeholder-color);
@@ -128,6 +144,10 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+
+            @include abstract.screen(md) {
+                font-size: 1.4rem;
+            }
         }
     }
 }

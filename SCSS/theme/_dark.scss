@@ -38,6 +38,8 @@ html.dark {
     --filter-btn-color: #fff;
     --filter-btn-bg: #171c28;
     --like-btn-bg: #292e39;
+    --btn-icon-color: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(125%) hue-rotate(187deg)
+        brightness(90%) contrast(90%);
 
     // Product card
     --product-card-bg: #171c28;
@@ -57,6 +59,8 @@ html.dark {
 
     // Auth
     --auth-content-bg: #292e39;
+    --auth-heading-color: #b9babe;
+    --auth-btn-color: var(--auth-heading-color);
 
     //Form
     --form-text-input-border-color: #b9babe;

@@ -89,4 +89,8 @@
         opacity: 0.5;
         pointer-events: none;
     }
+
+    &__icon {
+        fill: var(--btn-icon-color);
+    }
 }

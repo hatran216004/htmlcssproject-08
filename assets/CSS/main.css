@@ -152,6 +152,7 @@ body {
 
 img,
 input,
+label,
 textarea,
 select,
 button {
@@ -1315,17 +1316,14 @@ a {
   }
 }
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+  0%, 100% {
+    translate: 0;
   }
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
+  25%, 75% {
+    translate: 4px;
   }
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
+  50% {
+    translate: -4px;
   }
 }
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -1356,6 +1354,27 @@ a {
 @media (max-width: 767.98px) {
   .top-bar {
     justify-content: space-between;
+  }
+}
+@media (max-width: 991.98px) {
+  .top-bar__logo {
+    column-gap: 10px !important;
+    margin-left: 50px;
+  }
+  .top-bar__logo-title {
+    font-size: 1.8rem !important;
+  }
+  .top-bar__logo-img {
+    width: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .top-bar__logo {
+    margin-left: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
   }
 }
 
@@ -1494,7 +1513,7 @@ a {
   }
   .top-act__sign-up {
     height: 40px !important;
-    padding: 0 8px !important;
+    padding: 0 10px !important;
     font-size: 1.5rem !important;
   }
 }
@@ -1725,31 +1744,10 @@ a {
   column-gap: 14px;
   cursor: pointer;
 }
-@media (max-width: 991.98px) {
-  .logo {
-    column-gap: 10px;
-    margin-left: 50px;
-  }
-}
-@media (max-width: 767.98px) {
-  .logo {
-    margin-left: 0;
-  }
-}
 .logo__title {
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 145.455%;
-}
-@media (max-width: 991.98px) {
-  .logo__title {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .logo__img {
-    width: 24px;
-  }
 }
 
 .dropdown {
@@ -2164,6 +2162,9 @@ a {
   opacity: 0.5;
   pointer-events: none;
 }
+.btn__icon {
+  fill: var(--btn-icon-color);
+}
 
 .product-card {
   padding: 16px;
@@ -2461,12 +2462,17 @@ a {
 .form__group {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group--inline {
   display: flex;
   align-items: center;
 }
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
-  border-color: red;
+  border-color: #ed4337;
 }
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon--error {
@@ -2480,13 +2486,13 @@ a {
   font-size: 1.4rem;
   margin-top: 10px;
   font-weight: 500;
-  color: red;
+  color: #ed4337;
   display: none;
 }
 .form__input-icon--error {
   margin-left: 12px;
   display: none;
-  animation: shake 0.8s;
+  animation: shake 0.5s;
 }
 .form__text-input {
   height: 50px;
@@ -2495,6 +2501,11 @@ a {
   align-items: center;
   border-radius: 10px;
   border: 1px solid var(--form-text-input-border-color);
+}
+@media (max-width: 767.98px) {
+  .form__text-input {
+    height: 48px;
+  }
 }
 .form__text-input:focus-within {
   border-color: #77dae6;
@@ -2505,6 +2516,11 @@ a {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .form__input {
+    font-size: 1.6rem;
+  }
 }
 .form__input::placeholder {
   color: var(--form-input-placeholder-color);
@@ -2560,6 +2576,11 @@ a {
   font-weight: 500;
   line-height: 146.667%;
 }
+@media (max-width: 767.98px) {
+  .form__checkbox-label {
+    font-size: 1.4rem;
+  }
+}
 
 :root {
   --text-color: #1a162e;
@@ -2581,6 +2602,8 @@ a {
   --filter-btn-color: #6c6c72;
   --filter-btn-bg: #fff;
   --like-btn-bg: #fff;
+  --btn-icon-color: brightness(0) saturate(100%) invert(9%) sepia(35%) saturate(895%) hue-rotate(210deg)
+      brightness(94%) contrast(99%);
   --product-card-bg: #fff;
   --product-card-shadow: rgba(237, 237, 246, 0.2);
   --filter-form-bg: #fff;
@@ -2631,6 +2654,8 @@ html.dark {
   --filter-btn-color: #fff;
   --filter-btn-bg: #171c28;
   --like-btn-bg: #292e39;
+  --btn-icon-color: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(125%) hue-rotate(187deg)
+      brightness(90%) contrast(90%);
   --product-card-bg: #171c28;
   --product-card-shadow: rgba(0, 0, 0, 0.2);
   --filter-form-bg: var(--dropdown-bg-color);
@@ -2642,6 +2667,8 @@ html.dark {
       brightness(97%) contrast(93%);
   --footer-form-input-border-color: #fff;
   --auth-content-bg: #292e39;
+  --auth-heading-color: #b9babe;
+  --auth-btn-color: var(--auth-heading-color);
   --form-text-input-border-color: #b9babe;
   --form-input-placeholder-color: var(--form-text-input-border-color);
   --form-checkbox-label-color: var(--form-text-input-border-color);
@@ -2689,6 +2716,11 @@ html.dark {
   min-height: 100vh;
   display: flex;
 }
+@supports (-webkit-touch-callout: none) {
+  .auth {
+    min-height: -webkit-fill-available;
+  }
+}
 .auth__intro, .auth__content {
   flex: 1;
   padding: 0 30px;
@@ -2707,6 +2739,11 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .auth__intro-text {
+    font-size: 1.5rem;
+  }
 }
 .auth__intro-img {
   max-width: 100%;
@@ -2746,10 +2783,16 @@ html.dark {
   align-items: center;
 }
 .auth__heading {
+  color: var(--auth-heading-color);
   margin-top: 50px;
   font-size: 3rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 767.98px) {
+  .auth__heading {
+    font-size: 2.2rem;
+  }
 }
 .auth__desc {
   padding: 0 30px;
@@ -2760,9 +2803,19 @@ html.dark {
   font-weight: 500;
   line-height: 146.667%;
 }
+@media (max-width: 767.98px) {
+  .auth__desc {
+    font-size: 1.4rem;
+  }
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .auth__form {
+    margin-top: 10px;
+  }
 }
 .auth__link {
   user-select: none;
@@ -2770,6 +2823,11 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 767.98px) {
+  .auth__link {
+    font-size: 1.4rem;
+  }
 }
 .auth__link:hover {
   text-decoration: underline;
@@ -2781,13 +2839,24 @@ html.dark {
   gap: 30px;
 }
 .auth__btn {
+  border-radius: 10px !important;
+  color: var(--auth-btn-color);
   width: 100%;
 }
 .auth__text {
+  color: #9e9da8;
   margin-top: 108px;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .auth__text {
+    font-size: 1.6rem;
+  }
+}
+.auth__text-link {
+  font-size: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */

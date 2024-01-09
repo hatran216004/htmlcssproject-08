@@ -27,6 +27,29 @@
     @include abstract.screen(md) {
         justify-content: space-between;
     }
+
+    &__logo {
+        @include abstract.screen(lg) {
+            column-gap: 10px !important;
+            margin-left: 50px;
+
+            &-title {
+                font-size: 1.8rem !important;
+            }
+
+            &-img {
+                width: 24px;
+            }
+        }
+
+        @include abstract.screen(md) {
+            margin-left: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+        }
+    }
 }
 
 .navbar {
@@ -173,7 +196,7 @@
 
         &__sign-up {
             height: 40px !important;
-            padding: 0 8px !important;
+            padding: 0 10px !important;
             font-size: 1.5rem !important;
         }
     }
