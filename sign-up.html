@@ -50,6 +50,7 @@
                         <div class="form__group">
                             <div class="form__text-input">
                                 <input
+                                    required
                                     type="email"
                                     name=""
                                     id=""
@@ -58,27 +59,43 @@
                                     autocomplete="off"
                                 />
                                 <img src="./assets/images/auth/message.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon--error" />
                             </div>
+                            <p class="form__error">Please enter a valid email address</p>
                         </div>
                         <!-- Form group 2 -->
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="password" name="" id="" class="form__input" placeholder="Password" />
+                                <input
+                                    required
+                                    type="password"
+                                    name=""
+                                    id=""
+                                    class="form__input"
+                                    placeholder="Password"
+                                    minlength="6"
+                                />
                                 <img src="./assets/images/auth/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon--error" />
                             </div>
+                            <p class="form__error">Use a minimum of 6 characters</p>
                         </div>
                         <!-- Form group 3 -->
                         <div class="form__group">
                             <div class="form__text-input">
                                 <input
+                                    required
                                     type="password"
                                     name=""
                                     id=""
                                     class="form__input"
                                     placeholder="Confirm Password"
+                                    minlength="6"
                                 />
                                 <img src="./assets/images/auth/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon--error" />
                             </div>
+                            <p class="form__error">Use a minimum of 6 characters</p>
                         </div>
 
                         <div class="form__group form__group--inline">
@@ -90,10 +107,10 @@
                         </div>
 
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn">Sign Up</button>
+                            <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
                             <button class="btn btn--outline auth__btn btn--no-margin">
                                 <img src="./assets/images/auth/google.svg" alt="" class="btn__icon" />
-                                Sign in with Gmail
+                                Sign in with Google
                             </button>
                         </div>
                     </form>
