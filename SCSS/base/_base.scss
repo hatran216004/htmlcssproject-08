@@ -25,7 +25,6 @@ button {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    cursor: pointer;
     border: none;
     outline: none;
     padding: 0;
@@ -35,6 +34,10 @@ button {
 input,
 button {
     background-color: transparent;
+}
+
+button {
+    cursor: pointer;
 }
 
 a {
