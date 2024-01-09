@@ -1,6 +1,7 @@
 @use "../abstract";
 
 .logo {
+    user-select: none;
     display: flex;
     align-items: center;
     column-gap: 14px;

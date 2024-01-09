@@ -57,9 +57,12 @@
 
     // Auth
     --auth-content-bg: #fff;
+    @include abstract.screen(md) {
+        --auth-intro-bg: #fff;
+    }
 
     //Form
     --form-text-input-border-color: #d2d1d6;
-    --form-input-placeholder-color: var(--form-text-input-border-color);
+    --form-placeholder-color: var(--form-text-input-border-color);
     --form-checkbox-label-color: #9e9da8;
 }
