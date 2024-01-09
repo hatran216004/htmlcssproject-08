@@ -1478,6 +1478,11 @@ a {
   .top-act {
     margin-left: 0;
   }
+  .top-act__sign-up {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 .top-act__group {
   min-width: 50px;
@@ -2648,8 +2653,10 @@ html.dark {
 }
 .auth__intro, .auth__content {
   flex: 1;
+  padding: 0 30px;
 }
 .auth__intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2663,8 +2670,34 @@ html.dark {
   font-weight: 500;
   line-height: 144.444%;
 }
+.auth__intro-img {
+  max-width: 100%;
+}
+.auth__intro-logo, .auth__intro-next {
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  translate: -50% 0;
+}
+.auth__intro-next {
+  top: initial;
+  bottom: 50px;
+}
 .auth__content {
   background-color: var(--auth-content-bg);
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    translate: 100% 0;
+    transition: translate 0.3s;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 0 0;
+  }
 }
 .auth__content-inner {
   width: min(460px, 100%);
