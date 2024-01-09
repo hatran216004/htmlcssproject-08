@@ -54,4 +54,12 @@ html.dark {
 
     // Footer
     --footer-form-input-border-color: #fff;
+
+    // Auth
+    --auth-content-bg: #292e39;
+
+    //Form
+    --form-text-input-border-color: #b9babe;
+    --form-input-placeholder-color: var(--form-text-input-border-color);
+    --form-checkbox-label-color: var(--form-text-input-border-color);
 }
