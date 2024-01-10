@@ -69,10 +69,18 @@
 
     // Product detail
     --prod-detail-bg: #fff;
-    --prod-info-bg: #f6f6f6;
+    --prod-detail-info-bg: #f6f6f6;
+    @include abstract.screen(md) {
+        --prod-detail-bg: #fafafd;
+        --prod-detail-info-bg: #fff;
+        --prod-content-bg: #fff;
+    }
     --prod-info-tag-bg: #ededf6;
 
     // Breakcrumbs
     --breakcrumbs-bg: #f6f6f6;
+    @include abstract.screen(md) {
+        --breakcrumbs-bg: #fff;
+    }
     --breakcrumbs-shadow: rgba(237, 237, 246, 0.2);
 }

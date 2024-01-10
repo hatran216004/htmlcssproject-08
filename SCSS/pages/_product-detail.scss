@@ -1,6 +1,7 @@
 @use "../abstract";
 
 .prod-page {
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
 
@@ -12,12 +13,23 @@
     margin-top: 30px;
 }
 
+.prod-content {
+    @include abstract.screen(md) {
+        border-radius: 20px;
+        background-color: var(--prod-content-bg);
+    }
+}
+
 .prod-preview {
     padding: 0 30px;
 
     @include abstract.screen(lg) {
         display: flex;
         flex-direction: row-reverse;
+    }
+
+    @include abstract.screen(md) {
+        padding: 16px;
     }
 
     &__list {
@@ -83,7 +95,7 @@
 
 .prod-info {
     padding: 60px;
-    background: var(--prod-info-bg);
+    background: var(--prod-detail-info-bg);
 
     @include abstract.screen(xxl) {
         padding: 40px;
@@ -91,6 +103,14 @@
 
     @include abstract.screen(lg) {
         margin-top: 30px;
+    }
+
+    @include abstract.screen(md) {
+        padding: 0 16px 16px;
+        margin-top: 0;
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
     &__heading {
@@ -168,6 +188,10 @@
     @include abstract.screen(xxl) {
         padding-left: 10px;
     }
+
+    @include abstract.screen(lg) {
+        padding-left: 0;
+    }
 }
 
 .prod-property {
@@ -176,6 +200,10 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @include abstract.screen(md) {
+        margin-top: 20px;
+    }
 
     &__icon {
         align-self: flex-start;
