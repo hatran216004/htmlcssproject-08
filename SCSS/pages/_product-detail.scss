@@ -1,16 +1,16 @@
-.product-page {
+.prod-page {
     display: flex;
     flex-direction: column;
 
     min-height: 80vh;
-    background-color: var(--product-detail-bg);
+    background-color: var(--prod-detail-bg);
 }
 
-.product-container {
+.prod-container {
     margin-top: 30px;
 }
 
-.product-review {
+.prod-review {
     padding: 0 30px;
     &__list {
         display: flex;
@@ -64,8 +64,9 @@
     }
 }
 
-.product-info {
+.prod-info {
     padding: 60px;
+    background: var(--prod-info-bg);
 
     &__heading {
         font-size: 2.6rem;
@@ -80,22 +81,72 @@
     &__select {
         font-size: 1.5rem;
     }
+
+    &__card {
+        margin-top: 30px;
+        padding: 20px;
+
+        border-radius: 6px;
+        background-color: transparent;
+        border: 1px solid #b9babe;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+        margin-right: 10px;
+    }
+
+    &__tax {
+        color: #67b044;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        padding: 2px 8px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+    }
+
+    &__totle-price {
+        display: block;
+        margin: 20px 0;
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 138.462%;
+    }
+
+    &__add-to-cart {
+        flex: 1;
+    }
+
+    &__like-btn {
+        width: 46px;
+        height: 46px;
+        margin-left: 20px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+    }
+
+    &__tag {
+        background-color: var(--prod-info-tag-bg);
+    }
 }
 
-.product-propertys {
+.prod-propertys {
     padding-left: 30px;
 }
 
-.product-property {
+.prod-property {
     margin-top: 30px;
 
     display: flex;
     align-items: center;
     gap: 16px;
-
-    & + .product-property {
-        margin-top: 27px;
-    }
 
     &__icon {
         align-self: flex-start;

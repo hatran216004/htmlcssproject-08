@@ -62,12 +62,15 @@
     }
 
     //Form
+    --form-input-bg: #fff;
     --form-text-input-border-color: #d2d1d6;
     --form-placeholder-color: var(--form-text-input-border-color);
     --form-checkbox-label-color: #9e9da8;
 
     // Product detail
-    --product-detail-bg: #fff;
+    --prod-detail-bg: #fff;
+    --prod-info-bg: #f6f6f6;
+    --prod-info-tag-bg: #ededf6;
 
     // Breakcrumbs
     --breakcrumbs-bg: #f6f6f6;
