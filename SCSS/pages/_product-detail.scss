@@ -9,3 +9,57 @@
 .product-container {
     margin-top: 30px;
 }
+
+.product-review {
+    padding: 0 30px;
+    &__list {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding-top: 92%;
+        flex-shrink: 0;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        transition: translate 0.5s;
+    }
+
+    &__thumbs {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__thumb-img {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+
+        border: 2px solid rgba($color: #9e9da8, $alpha: 0.3);
+        border-radius: 10px;
+
+        transition: border-color 0.25s;
+
+        &:hover {
+            cursor: pointer;
+            border-color: rgba($color: #9e9da8, $alpha: 0.8);
+        }
+
+        &--current {
+            border-color: #ffb700;
+        }
+    }
+}
