@@ -72,6 +72,18 @@
         font-weight: 500;
         line-height: 138.462%;
     }
+
+    &__label {
+        margin-top: 30px;
+    }
+
+    &__select {
+        font-size: 1.5rem;
+    }
+}
+
+.product-propertys {
+    padding-left: 30px;
 }
 
 .product-property {
