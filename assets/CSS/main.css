@@ -2765,8 +2765,7 @@ html.dark {
   }
 }
 .auth__intro-img {
-  width: var(--width);
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .auth__intro-logo, .auth__intro-next {
   position: absolute;
@@ -2895,6 +2894,26 @@ html.dark {
 }
 .auth__message {
   margin-top: 20px;
+}
+.auth__password-list {
+  margin-top: 20px;
+  text-align: left;
+  margin-right: auto;
+}
+.auth__password-item {
+  display: flex;
+  align-items: center;
+}
+.auth__password-icon {
+  margin: 8px 10px 0 0;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(69%) saturate(304%) hue-rotate(60deg) brightness(88%) contrast(89%);
+}
+.auth__password-text {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: #97bf8b;
 }
 
 /*# sourceMappingURL=main.css.map */

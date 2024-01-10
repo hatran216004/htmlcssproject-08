@@ -37,8 +37,7 @@
         }
 
         &-img {
-            width: var(--width);
-            max-width: 100%;
+            width: min(424px, 100%);
         }
 
         &-logo,
@@ -178,5 +177,32 @@
 
     &__message {
         margin-top: 20px;
+    }
+
+    &__password {
+        &-list {
+            margin-top: 20px;
+            text-align: left;
+            margin-right: auto;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+        }
+
+        &-icon {
+            margin: 8px 10px 0 0;
+            filter: brightness(0) saturate(100%) invert(48%) sepia(69%) saturate(304%) hue-rotate(60deg) brightness(88%)
+                contrast(89%);
+        }
+
+        &-text {
+            margin-top: 8px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+            color: #97bf8b;
+        }
     }
 }
