@@ -3013,4 +3013,37 @@ html.dark {
   border-color: #ffb700;
 }
 
+.product-info {
+  padding: 60px;
+}
+.product-info__heading {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 138.462%;
+}
+
+.product-property {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product-property + .product-property {
+  margin-top: 27px;
+}
+.product-property__icon {
+  align-self: flex-start;
+}
+.product-property__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.product-property__desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
 /*# sourceMappingURL=main.css.map */
