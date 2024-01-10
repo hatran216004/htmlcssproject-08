@@ -68,4 +68,11 @@ html.dark {
     --form-text-input-border-color: #b9babe;
     --form-input-placeholder-color: var(--form-text-input-border-color);
     --form-checkbox-label-color: var(--form-text-input-border-color);
+
+    // Product detail
+    --product-detail-bg: #292e39;
+
+    // Breakcrumbs
+    --breakcrumbs-bg: #171c28;
+    --breakcrumbs-shadow: rgba(23, 28, 40, 0.2);
 }

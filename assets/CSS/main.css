@@ -2592,6 +2592,41 @@ a {
   border: 1px solid #1ea861;
 }
 
+.breakcrumbs {
+  padding: 20px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 10px;
+  background: var(--breakcrumbs-bg);
+  box-shadow: 0px 20px 60px 10px var(--breakcrumbs-shadow);
+}
+@media (max-width: 767.98px) {
+  .breakcrumbs {
+    gap: 16px;
+  }
+}
+.breakcrumbs__link {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  color: #9e9da8;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .breakcrumbs__link {
+    font-size: 1.4rem;
+  }
+}
+.breakcrumbs__link--current {
+  color: inherit;
+}
+
 :root {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(5863%) hue-rotate(212deg) brightness(102%)
@@ -2626,6 +2661,9 @@ a {
   --form-text-input-border-color: #d2d1d6;
   --form-placeholder-color: var(--form-text-input-border-color);
   --form-checkbox-label-color: #9e9da8;
+  --product-detail-bg: #fff;
+  --breakcrumbs-bg: #f6f6f6;
+  --breakcrumbs-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -2689,6 +2727,9 @@ html.dark {
   --form-text-input-border-color: #b9babe;
   --form-input-placeholder-color: var(--form-text-input-border-color);
   --form-checkbox-label-color: var(--form-text-input-border-color);
+  --product-detail-bg: #292e39;
+  --breakcrumbs-bg: #171c28;
+  --breakcrumbs-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2914,6 +2955,17 @@ html.dark {
   font-weight: 500;
   line-height: 146.667%;
   color: #97bf8b;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: var(--product-detail-bg);
+}
+
+.product-container {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
