@@ -2543,7 +2543,7 @@ a {
   rotate: -45deg;
   position: absolute;
   top: 4.5px;
-  left: 2.4px;
+  left: 3px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0.2s;
@@ -2577,6 +2577,19 @@ a {
   .form__checkbox-label {
     font-size: 1.4rem;
   }
+}
+
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+.message--success {
+  background-color: rgba(182, 234, 205, 0.2);
+  border: 1px solid #1ea861;
 }
 
 :root {
@@ -2752,6 +2765,7 @@ html.dark {
   }
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-logo, .auth__intro-next {
@@ -2824,6 +2838,9 @@ html.dark {
   width: 100%;
   margin-top: 30px;
 }
+.auth__form-forgot {
+  margin-top: 10px;
+}
 @media (max-width: 767.98px) {
   .auth__form {
     margin-top: 10px;
@@ -2875,6 +2892,9 @@ html.dark {
 }
 .auth__text-link {
   font-size: inherit;
+}
+.auth__message {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -37,6 +37,7 @@
         }
 
         &-img {
+            width: var(--width);
             max-width: 100%;
         }
 
@@ -115,6 +116,10 @@
         width: 100%;
         margin-top: 30px;
 
+        &-forgot {
+            margin-top: 10px;
+        }
+
         @include abstract.screen(md) {
             margin-top: 10px;
         }
@@ -169,5 +174,9 @@
         &-link {
             font-size: inherit;
         }
+    }
+
+    &__message {
+        margin-top: 20px;
     }
 }
