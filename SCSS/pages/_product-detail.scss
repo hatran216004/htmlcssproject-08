@@ -11,6 +11,10 @@
 
 .prod-container {
     margin-top: 30px;
+
+    @include abstract.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .prod-content {
@@ -82,7 +86,7 @@
 
         transition: border-color 0.25s;
 
-        &:hover {
+        &:not(&--current):hover {
             cursor: pointer;
             border-color: rgba($color: #9e9da8, $alpha: 0.8);
         }
@@ -95,6 +99,7 @@
 
 .prod-info {
     padding: 60px;
+    border-radius: 10px;
     background: var(--prod-detail-info-bg);
 
     @include abstract.screen(xxl) {
@@ -117,6 +122,10 @@
         font-size: 2.6rem;
         font-weight: 500;
         line-height: 138.462%;
+
+        @include abstract.screen(md) {
+            font-size: 1.8rem;
+        }
     }
 
     &__label {
@@ -150,11 +159,12 @@
 
     &__tax {
         color: #67b044;
+        border-radius: 4px;
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 142.857%;
         padding: 2px 8px;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+        background: rgba($color: #67b044, $alpha: 0.2);
     }
 
     &__totle-price {
@@ -175,6 +185,7 @@
         margin-left: 20px;
         border-radius: 6px;
         border: 1px solid #d2d1d6;
+        background-color: transparent;
     }
 
     &__tag {
@@ -200,10 +211,6 @@
     display: flex;
     align-items: center;
     gap: 16px;
-
-    @include abstract.screen(md) {
-        margin-top: 20px;
-    }
 
     &__icon {
         align-self: flex-start;

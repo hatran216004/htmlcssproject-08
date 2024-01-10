@@ -56,6 +56,7 @@ html.dark {
 
     // Footer
     --footer-form-input-border-color: #fff;
+    --footer-bg: var(--header-background);
 
     // Auth
     --auth-content-bg: #292e39;
@@ -79,4 +80,7 @@ html.dark {
     // Breakcrumbs
     --breakcrumbs-bg: #171c28;
     --breakcrumbs-shadow: rgba(23, 28, 40, 0.2);
+
+    // Search bar
+    --search-bar-bg: #171c28;
 }

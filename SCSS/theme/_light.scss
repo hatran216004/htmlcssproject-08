@@ -54,6 +54,7 @@
 
     // Footer
     --footer-form-input-border-color: #8e919a;
+    --footer-bg: var(--header-background);
 
     // Auth
     --auth-content-bg: #fff;
@@ -73,8 +74,8 @@
     @include abstract.screen(md) {
         --prod-detail-bg: #fafafd;
         --prod-detail-info-bg: #fff;
-        --prod-content-bg: #fff;
     }
+    --prod-content-bg: #fff;
     --prod-info-tag-bg: #ededf6;
 
     // Breakcrumbs
@@ -83,4 +84,7 @@
         --breakcrumbs-bg: #fff;
     }
     --breakcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+    // Search bar
+    --search-bar-bg: #fff;
 }
