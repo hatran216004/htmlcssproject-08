@@ -68,7 +68,7 @@
     }
 
     a {
-        color: #f3349d;
+        color: #0071dc;
         text-decoration: underline;
     }
 
@@ -85,7 +85,7 @@
     hr {
         border: none;
         height: 1px;
-        background-color: rgb(103, 176, 68);
+        background-color: var(--text-content-hr-bg);
         margin: 40px 0;
     }
 }

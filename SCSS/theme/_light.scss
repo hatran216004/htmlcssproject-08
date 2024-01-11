@@ -93,4 +93,7 @@
     @include abstract.screen(md) {
         --review-card-bg: #fff;
     }
+
+    // Text content
+    --text-content-hr-bg: rgb(103, 176, 68);
 }
