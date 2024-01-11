@@ -1661,6 +1661,11 @@ img {
   border-style: solid;
   border-color: var(--act-dropdow-bottom-border);
 }
+.act-dropdow__separate {
+  margin: 20px 0;
+  height: 1px;
+  background-color: var(--act-dropdow-bottom-border);
+}
 .act-dropdow__row {
   display: flex;
   align-items: center;
