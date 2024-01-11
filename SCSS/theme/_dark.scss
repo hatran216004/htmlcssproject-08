@@ -77,14 +77,15 @@ html.dark {
     --form-checkbox-label-color: var(--form-text-input-border-color);
 
     // Product detail
-    --prod-detail-bg: #292e39;
+    --product-detail-bg: #292e39;
     --prod-detail-info-bg: #171c28;
-    --prod-info-tag-bg: var(--prod-detail-bg);
+    --prod-info-tag-bg: var(--product-detail-bg);
     --prod-content-bg: #171c28;
 
     // Breakcrumbs
     --breakcrumbs-bg: #171c28;
     --breakcrumbs-shadow: rgba(23, 28, 40, 0.2);
+    --checkout-page-breakcrumbs-bg: #171c28;
 
     // Search bar
     --search-bar-bg: #171c28;
@@ -94,4 +95,9 @@ html.dark {
 
     // Text content
     --text-content-hr-bg: rgba(103, 176, 68, 0.4);
+
+    // Cart item
+    --cart-item-border-color: #292e39;
+    --cart-info-bg: #171c28;
+    --cart-info-shadow: rgba(23, 28, 40, 0.2);
 }

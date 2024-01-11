@@ -214,6 +214,11 @@
 
     &__btn-wrap {
         position: relative;
+
+        &:hover .act-dropdow {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__btn {
@@ -274,17 +279,13 @@
 
 .act-dropdow {
     width: min(500px, 100vw);
+    padding-top: 28px;
     position: absolute;
-    top: 77px;
+    top: 48px;
     right: -60px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
-
-    &.show {
-        opacity: 1;
-        visibility: visible;
-    }
 
     &__inner {
         position: relative;

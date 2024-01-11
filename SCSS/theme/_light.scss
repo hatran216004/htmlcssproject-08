@@ -74,10 +74,10 @@
     --form-checkbox-label-color: #9e9da8;
 
     // Product detail
-    --prod-detail-bg: #fff;
+    --product-detail-bg: #fff;
     --prod-detail-info-bg: #f6f6f6;
     @include abstract.screen(md) {
-        --prod-detail-bg: #fafafd;
+        --product-detail-bg: #fafafd;
         --prod-detail-info-bg: #fff;
     }
     --prod-content-bg: #fff;
@@ -89,6 +89,7 @@
         --breakcrumbs-bg: #fff;
     }
     --breakcrumbs-shadow: rgba(237, 237, 246, 0.2);
+    --checkout-page-breakcrumbs-bg: #fff;
 
     // Search bar
     --search-bar-bg: #fff;
@@ -101,4 +102,9 @@
 
     // Text content
     --text-content-hr-bg: rgb(103, 176, 68);
+
+    // Cart item
+    --cart-item-border-color: #d2d1d6;
+    --cart-info-bg: #fff;
+    --cart-info-shadow: rgba(237, 237, 246, 0.2);
 }
