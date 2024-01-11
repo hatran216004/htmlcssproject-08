@@ -1552,12 +1552,11 @@ img {
   background: var(--top-act-group-bg);
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 }
-.top-act__group:nth-child(2) {
-  padding: 0 20px;
+.top-act__btn-wrap {
+  position: relative;
 }
 .top-act__btn {
-  position: relative;
-  justify-content: center;
+  padding: 13px 20px;
   column-gap: 10px;
   cursor: pointer;
 }
@@ -1607,14 +1606,29 @@ img {
 .act-dropdow {
   width: min(500px, 100vw);
   position: absolute;
-  top: 60px;
+  top: 77px;
   right: -60px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.act-dropdow.show {
+  opacity: 1;
+  visibility: visible;
 }
 .act-dropdow__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--act-dropdown-inner-bg);
   box-shadow: 0px 40px 90px 20px var(--act-dropdown-inner-shadow);
+}
+.act-dropdow__arrow {
+  position: absolute;
+  top: -17px;
+  right: 72px;
+  height: 20.5px;
+  filter: var(--dropdown-arrow-color);
 }
 .act-dropdow__top {
   margin-bottom: 20px;
@@ -1623,11 +1637,13 @@ img {
   justify-content: space-between;
 }
 .act-dropdow__title {
+  user-select: none;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 145.455%;
 }
 .act-dropdow__view-all {
+  user-select: none;
   color: #0071dc;
   font-size: 1.8rem;
   font-weight: 400;
@@ -1643,7 +1659,7 @@ img {
   padding: 20px 0;
   border-width: 1px 0;
   border-style: solid;
-  border-color: #d2d1d6;
+  border-color: var(--act-dropdow-bottom-border);
 }
 .act-dropdow__row {
   display: flex;
@@ -2944,6 +2960,7 @@ img {
   --top-act-separate: #ededf6;
   --act-dropdown-inner-bg: #fff;
   --act-dropdown-inner-shadow: rgba(200, 200, 200, 0.4);
+  --act-dropdow-bottom-border: #d2d1d6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
@@ -3023,8 +3040,9 @@ html.dark {
   --top-act-group-bg: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-separate: #ededf6;
-  --act-dropdown-inner-bg: #292e39;
+  --act-dropdown-inner-bg: #2f3441;
   --act-dropdown-inner-shadow: rgba(23, 28, 40, 0.4);
+  --act-dropdow-bottom-border: #171c28;
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(29%) saturate(398%) hue-rotate(185deg)
       brightness(97%) contrast(91%);
   --dropdown-bg-color: #2f3441;
