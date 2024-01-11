@@ -90,4 +90,7 @@
 
     // Review card
     --review-card-bg: #fafafd;
+    @include abstract.screen(md) {
+        --review-card-bg: #fff;
+    }
 }
