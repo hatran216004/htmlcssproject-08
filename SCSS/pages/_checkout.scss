@@ -23,8 +23,8 @@
 .cart-info {
     padding: 30px;
     border-radius: 20px;
-    background: var(--cart-info-bg);
-    box-shadow: 0px 20px 60px 10px var(--cart-info-shadow);
+    background: var(--checkout-cart-info-bg);
+    box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
 
     @include abstract.screen(md) {
         padding: 16px;
@@ -86,7 +86,7 @@
     &__separate {
         margin: 30px 0;
         height: 1px;
-        background-color: var(--cart-item-border-color);
+        background-color: var(--checkout-cart-item-border);
     }
 
     &__sub-label {
@@ -104,11 +104,13 @@
 
 .cart-item {
     display: flex;
+    gap: 30px;
     padding: 30px 0;
-    border-bottom: 1px solid var(--cart-item-border-color);
+    border-bottom: 1px solid var(--checkout-cart-item-border);
 
     @include abstract.screen(md) {
         padding: 16px 0;
+        gap: 16px;
 
         &:last-child {
             border: none;
@@ -222,6 +224,7 @@
         line-height: 145.455%;
 
         @include abstract.screen(md) {
+            margin-bottom: 16px;
             text-align: left;
         }
     }

@@ -85,7 +85,6 @@ html.dark {
     // Breakcrumbs
     --breakcrumbs-bg: #171c28;
     --breakcrumbs-shadow: rgba(23, 28, 40, 0.2);
-    --checkout-page-breakcrumbs-bg: #171c28;
 
     // Search bar
     --search-bar-bg: #171c28;
@@ -96,11 +95,15 @@ html.dark {
     // Text content
     --text-content-hr-bg: rgba(103, 176, 68, 0.4);
 
-    // Cart item
-    --cart-item-border-color: #292e39;
-    --cart-info-bg: #171c28;
-    --cart-info-shadow: rgba(23, 28, 40, 0.2);
+    // Checkout
+    --checkout-page-breakcrumbs-bg: #171c28;
+    --checkout-cart-item-border: #292e39;
+    --checkout-cart-info-bg: #171c28;
+    --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
 
     // Gift item
     --gift-item-thumb-wrap-bg: #292e39;
+
+    // Dialog
+    --dialog-bg: var(--dropdown-bg-color);
 }
