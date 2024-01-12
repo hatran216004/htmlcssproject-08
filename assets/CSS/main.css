@@ -2287,7 +2287,6 @@ img {
 }
 .btn--small {
   height: 40px;
-  padding: 0 16px;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
@@ -3860,8 +3859,8 @@ html.dark {
   border-radius: 10px;
   border: 1px solid #d2d1d6;
 }
-.cart-item__icon {
-  margin-top: 3px;
+.cart-item__input-btn {
+  display: flex;
 }
 .cart-item__total-price {
   display: block;
@@ -3921,6 +3920,18 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767.98px) {
+  .user-address__btn {
+    height: 46px;
+  }
 }
 .user-address__title {
   font-size: 1.8rem;
@@ -3933,15 +3944,29 @@ html.dark {
   font-weight: 400;
   line-height: 146.667%;
 }
+.user-address__message--empty {
+  margin-top: 30px;
+  font-weight: 500;
+}
+.user-address__link {
+  margin-left: 12px;
+  color: #0071dc;
+}
 
 .address-cart {
   margin-top: 30px;
   display: flex;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-cart {
+    flex-direction: column;
+  }
 }
 .address-cart__left {
   flex: 1;
   display: flex;
-  gap: 16px;
+  gap: 36px;
 }
 .address-cart__title {
   font-size: 1.8rem;
@@ -3949,6 +3974,7 @@ html.dark {
   line-height: 144.444%;
 }
 .address-cart__desc {
+  width: min(520px, 90%);
   margin-top: 4px;
   font-size: 1.5rem;
   font-weight: 400;
@@ -3963,6 +3989,12 @@ html.dark {
   font-weight: 400;
   line-height: 142.857%;
 }
+@media (max-width: 575.98px) {
+  .address-cart__list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 .address-cart__transport {
   padding-left: 8px;
 }
@@ -3975,6 +4007,24 @@ html.dark {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.address-cart__checkbox {
+  position: relative;
+}
+.address-cart__checkbox-input {
+  appearance: none;
+}
+.address-cart__checkbox-input::after {
+  content: url(../icons/checkbox-uncheck.svg);
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.address-cart__checkbox-input:not(:checked)::after {
+  filter: var(--icon-color);
+}
+.address-cart__checkbox-input:checked::after {
+  content: url(../icons/checkbox-checked.svg);
 }
 
 /*# sourceMappingURL=main.css.map */
