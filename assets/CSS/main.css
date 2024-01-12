@@ -3007,6 +3007,7 @@ img {
   --cart-item-border-color: #d2d1d6;
   --cart-info-bg: #fff;
   --cart-info-shadow: rgba(237, 237, 246, 0.2);
+  --gift-item-thumb-wrap-bg: #f1ecfc;
 }
 @media (max-width: 991.98px) {
   :root {
@@ -3104,6 +3105,7 @@ html.dark {
   --cart-item-border-color: #292e39;
   --cart-info-bg: #171c28;
   --cart-info-shadow: rgba(23, 28, 40, 0.2);
+  --gift-item-thumb-wrap-bg: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3628,6 +3630,56 @@ html.dark {
 .cart-info__list {
   margin-top: -30px;
 }
+.cart-info__bottom {
+  margin-top: 30px;
+}
+.cart-info__row, .cart-info__back-link {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.cart-info__back {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.cart-info__back-arrow {
+  rotate: 90deg;
+  transition: translate 0.3s;
+}
+.cart-info__back-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-info__back-link:hover .cart-info__back-arrow {
+  translate: -3px 0;
+}
+.cart-info__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.cart-info__row-total {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.cart-info__separate {
+  margin: 30px 0;
+  height: 1px;
+  background-color: var(--cart-item-border-color);
+}
+.cart-info__sub-label {
+  font-weight: normal;
+}
+.cart-info__next-btn {
+  margin-top: 30px;
+}
+
+.cart-info + .cart-info {
+  margin-top: 30px;
+}
 
 .cart-item {
   display: flex;
@@ -3635,6 +3687,7 @@ html.dark {
   border-bottom: 1px solid var(--cart-item-border-color);
 }
 .cart-item__thumb {
+  margin: 0 30px 0 20px;
   width: 172px;
   height: 172px;
   object-fit: contain;
@@ -3708,6 +3761,33 @@ html.dark {
 }
 .cart-item__control-btn:last-child {
   margin-left: 10px;
+}
+
+.gift-item {
+  display: flex;
+  gap: 20px;
+}
+.gift-item__thumb-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 14px;
+  background: var(--gift-item-thumb-wrap-bg);
+}
+.gift-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.gift-item__desc {
+  max-width: 235px;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
 }
 
 /*# sourceMappingURL=main.css.map */
