@@ -32,6 +32,7 @@ button {
     padding: 0;
 }
 
+textarea,
 input,
 button {
     background-color: transparent;
@@ -46,11 +47,16 @@ input {
 }
 
 /* Change the white to any color */
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    transition: background-color 1s 9999s;
+    -webkit-text-fill-color: #fff;
 }
 
 a {

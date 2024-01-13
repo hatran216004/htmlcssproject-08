@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -476,10 +476,10 @@
         <!-- Modal: Add a new address -->
         <div id="add-new-address" class="modal show" style="--content-width: 700px">
             <div class="modal__content">
-                <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
-                <h2 class="modal__heading">Add new shopping address</h2>
-                <div class="modal__body">
-                    <form action="" class="form">
+                <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button>
+                <form action="" class="form">
+                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <div class="modal__body">
                         <div class="form__row">
                             <!-- Form group -->
                             <div class="form__group">
@@ -555,19 +555,19 @@
                                 <span class="form__checkbox-label">Set as default address</span>
                             </label>
                         </div>
-                    </form>
-                </div>
-                <div class="modal__bottom">
-                    <button class="btn btn--text modal__btn js-toggle" toggle-target="#add-new-address" v>
-                        Cancel
-                    </button>
-                    <button
-                        class="btn btn--primary btn--no-margin modal__btn js-toggle"
-                        toggle-target="#add-new-address"
-                    >
-                        Create
-                    </button>
-                </div>
+                    </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--text modal__btn js-toggle" toggle-target="#add-new-address" v>
+                            Cancel
+                        </button>
+                        <button
+                            class="btn btn--primary btn--no-margin modal__btn js-toggle"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
             </div>
 
             <div class="modal__overlay"></div>
