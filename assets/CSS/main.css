@@ -1365,6 +1365,8 @@ img {
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   padding: 30px 0;
   background-color: var(--header-background);
 }
@@ -2679,10 +2681,10 @@ img {
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
-  padding: 19px 0;
+  padding: 20px 0;
 }
 .form__close-dialog {
-  padding: 0 12px;
+  padding: 0 15px;
   font-size: 4rem;
   position: absolute;
   right: 0;
@@ -2699,15 +2701,14 @@ img {
 }
 @media (max-width: 991.98px) {
   .form__search {
-    height: 42px;
+    height: 48px;
   }
 }
 @media (max-width: 575.98px) {
   .form__search {
-    height: 42px;
     flex-direction: row-reverse;
     padding: 0 15px;
-    margin: 15px 15px 0;
+    margin: 15px 30px 0;
     border-radius: 10px;
     border: 1px solid var(--form-text-input-border-color);
   }
@@ -2723,6 +2724,7 @@ img {
 }
 @media (max-width: 575.98px) {
   .form__search-icon {
+    width: 20px;
     margin: 0 12px 0 0;
   }
 }
@@ -2732,6 +2734,11 @@ img {
   flex: 1;
   overflow-y: auto;
 }
+@supports (-webkit-touch-callout: none) {
+  .form__options-list {
+    padding-bottom: 300px;
+  }
+}
 .form___option {
   user-select: none;
   font-size: 1.4rem;
@@ -2739,7 +2746,8 @@ img {
 }
 @media (max-width: 991.98px) {
   .form___option {
-    padding: 14px 20px;
+    font-size: 1.6rem;
+    padding: 18px 30px;
   }
 }
 .form___option--active {
@@ -2949,7 +2957,7 @@ img {
   flex: 1;
   padding-left: 15px;
   height: 100%;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 142.857%;
 }

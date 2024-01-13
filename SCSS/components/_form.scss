@@ -139,11 +139,11 @@ $error-color: #ed4337;
         font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
-        padding: 19px 0;
+        padding: 20px 0;
     }
 
     &__close-dialog {
-        padding: 0 12px;
+        padding: 0 15px;
         font-size: 4rem;
         position: absolute;
         right: 0;
@@ -160,14 +160,13 @@ $error-color: #ed4337;
         border-bottom: 1px solid var(--form-text-input-border-color);
 
         @include abstract.screen(lg) {
-            height: 42px;
+            height: 48px;
         }
 
         @include abstract.screen(sm) {
-            height: 42px;
             flex-direction: row-reverse;
             padding: 0 15px;
-            margin: 15px 15px 0;
+            margin: 15px 30px 0;
             border-radius: 10px;
             border: 1px solid var(--form-text-input-border-color);
         }
@@ -183,6 +182,7 @@ $error-color: #ed4337;
             width: 16px;
 
             @include abstract.screen(sm) {
+                width: 20px;
                 margin: 0 12px 0 0;
             }
         }
@@ -193,6 +193,10 @@ $error-color: #ed4337;
         margin-top: 10px;
         flex: 1;
         overflow-y: auto;
+
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 300px;
+        }
     }
 
     &___option {
@@ -201,7 +205,8 @@ $error-color: #ed4337;
         padding: 10px 20px;
 
         @include abstract.screen(lg) {
-            padding: 14px 20px;
+            font-size: 1.6rem;
+            padding: 18px 30px;
         }
 
         &--active {
