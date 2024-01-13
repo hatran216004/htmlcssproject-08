@@ -1,11 +1,19 @@
 @use "../abstract";
 
 $error-color: #ed4337;
-
 .form {
     &:has(:invalid) &__submit-btn {
         opacity: 0.5;
         pointer-events: none;
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+
+        > * {
+            flex: 1;
+        }
     }
 
     &__group {
@@ -51,18 +59,17 @@ $error-color: #ed4337;
         animation: shake 0.5s;
     }
 
+    &__text-area,
     &__text-input {
-        height: 50px;
-        padding: 0 12px;
-
         display: flex;
         align-items: center;
 
+        padding: 0 12px;
         border-radius: 10px;
         border: 1px solid var(--form-text-input-border-color);
 
-        @include abstract.screen(md) {
-            height: 48px;
+        &--small {
+            border-radius: 8px;
         }
 
         &:focus-within {
@@ -70,7 +77,30 @@ $error-color: #ed4337;
         }
     }
 
-    &__input {
+    &__text-input {
+        height: 50px;
+
+        &--small {
+            height: 42px;
+        }
+
+        @include abstract.screen(md) {
+            height: 48px;
+        }
+    }
+
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__input,
+    &__text-area-input {
         flex: 1;
         height: 100%;
         font-size: 1.8rem;
@@ -85,7 +115,9 @@ $error-color: #ed4337;
         &::placeholder {
             color: var(--form-placeholder-color);
         }
+    }
 
+    &__input {
         &-icon {
             margin-left: 12px;
         }

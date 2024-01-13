@@ -2555,6 +2555,13 @@ img {
   opacity: 0.5;
   pointer-events: none;
 }
+.form__row {
+  display: flex;
+  gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2590,23 +2597,39 @@ img {
   display: none;
   animation: shake 0.5s;
 }
-.form__text-input {
-  height: 50px;
-  padding: 0 12px;
+.form__text-area, .form__text-input {
   display: flex;
   align-items: center;
+  padding: 0 12px;
   border-radius: 10px;
   border: 1px solid var(--form-text-input-border-color);
+}
+.form__text-area--small, .form__text-input--small {
+  border-radius: 8px;
+}
+.form__text-area:focus-within, .form__text-input:focus-within {
+  border-color: #77dae6;
+}
+.form__text-input {
+  height: 50px;
+}
+.form__text-input--small {
+  height: 42px;
 }
 @media (max-width: 767.98px) {
   .form__text-input {
     height: 48px;
   }
 }
-.form__text-input:focus-within {
-  border-color: #77dae6;
+.form__text-area {
+  height: 100px;
+  padding: 12px;
 }
-.form__input {
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
   font-size: 1.8rem;
@@ -2615,11 +2638,11 @@ img {
   background-color: var(--form-input-bg);
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1.6rem;
   }
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: var(--form-placeholder-color);
 }
 .form__input-icon {
@@ -2957,12 +2980,12 @@ img {
   margin: 40px 0;
 }
 
-.dialog__overlay, .dialog {
+.modal__overlay, .modal {
   position: fixed;
   inset: 0;
 }
 
-.dialog {
+.modal {
   z-index: 99;
   display: flex;
   align-items: center;
@@ -2971,32 +2994,66 @@ img {
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
 }
-.dialog.show {
+.modal.show {
   opacity: 1;
   visibility: visible;
 }
-.dialog__overlay {
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #333;
+  z-index: 2;
+  font-size: 3rem;
+  padding: 2px 16px 0;
+  opacity: 0.8;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__overlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.dialog__content {
+.modal--small .modal__content {
+  --content-width: 400px;
+}
+.modal--large .modal__content {
+  --content-width: 1100px;
+}
+.modal--fill .modal__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.modal__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+.modal__body {
+  padding-right: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal__content {
   position: relative;
   z-index: 1;
-  max-width: min(450px, 100% - 40px);
+  width: min(var(--content-width, 800px), 100% - 40px);
   padding: 30px;
   border-radius: 20px;
-  background-color: var(--dialog-bg);
+  background-color: var(--modal-bg);
 }
 @media (max-width: 767.98px) {
-  .dialog__content {
+  .modal__content {
     padding: 20px;
   }
 }
-.dialog__text {
+.modal__text {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5;
 }
-.dialog__bottom {
+.modal__bottom {
   margin-top: 30px;
   display: flex;
   gap: 20px;
@@ -3005,7 +3062,7 @@ img {
   flex-wrap: wrap;
 }
 @media (max-width: 767.98px) {
-  .dialog__btn {
+  .modal__btn {
     flex: 1;
   }
 }
@@ -3063,7 +3120,7 @@ img {
   --checkout-cart-info-bg: #fff;
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
   --gift-item-thumb-wrap-bg: #f1ecfc;
-  --dialog-bg: var(--dropdown-bg-color);
+  --modal-bg: var(--dropdown-bg-color);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -3139,12 +3196,12 @@ html.dark {
       brightness(97%) contrast(93%);
   --footer-form-input-border-color: #fff;
   --footer-bg: var(--header-background);
-  --auth-content-bg: #292e39;
+  --auth-content-bg: #2f3441;
   --auth-heading-color: #b9babe;
   --auth-btn-color: var(--auth-heading-color);
   --auth-intro-bg: #171c28;
   --auth-intro-text-color: #b9babe;
-  --form-input-bg: #292e39;
+  --form-input-bg: #2f3441;
   --form-text-input-border-color: #b9babe;
   --form-input-placeholder-color: var(--form-text-input-border-color);
   --form-checkbox-label-color: var(--form-text-input-border-color);
@@ -3162,7 +3219,7 @@ html.dark {
   --checkout-cart-info-bg: #171c28;
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
   --gift-item-thumb-wrap-bg: #292e39;
-  --dialog-bg: var(--dropdown-bg-color);
+  --modal-bg: var(--dropdown-bg-color);
 }
 @media (max-width: 991.98px) {
   html.dark {

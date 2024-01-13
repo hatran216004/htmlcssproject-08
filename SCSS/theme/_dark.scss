@@ -64,14 +64,14 @@ html.dark {
     --footer-bg: var(--header-background);
 
     // Auth
-    --auth-content-bg: #292e39;
+    --auth-content-bg: #2f3441;
     --auth-heading-color: #b9babe;
     --auth-btn-color: var(--auth-heading-color);
     --auth-intro-bg: #171c28;
     --auth-intro-text-color: #b9babe;
 
     //Form
-    --form-input-bg: #292e39;
+    --form-input-bg: #2f3441;
     --form-text-input-border-color: #b9babe;
     --form-input-placeholder-color: var(--form-text-input-border-color);
     --form-checkbox-label-color: var(--form-text-input-border-color);
@@ -104,6 +104,6 @@ html.dark {
     // Gift item
     --gift-item-thumb-wrap-bg: #292e39;
 
-    // Dialog
-    --dialog-bg: var(--dropdown-bg-color);
+    // modal
+    --modal-bg: var(--dropdown-bg-color);
 }
