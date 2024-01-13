@@ -77,16 +77,13 @@ $error-color: #ed4337;
         border-radius: 10px;
         border: 1px solid var(--form-text-input-border-color);
 
-        &--small {
-            border-radius: 8px;
-        }
-
         &:focus-within {
             border-color: #77dae6;
         }
     }
 
     &__text-input {
+        position: relative;
         height: 50px;
 
         &--small {
@@ -95,6 +92,71 @@ $error-color: #ed4337;
 
         @include abstract.screen(md) {
             height: 48px;
+        }
+    }
+
+    &__select-dialog {
+        max-height: 300px;
+        min-width: 230px;
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        bottom: 55px;
+        left: 12px;
+
+        background-color: var(--modal-bg);
+        border: 1px solid var(--form-text-input-border-color);
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 8px;
+
+        transition: opacity, visibility, translate;
+        transition-duration: 0.25s;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--form-text-input-border-color);
+
+        &-input {
+            flex: 1;
+            height: 100%;
+        }
+
+        &-icon {
+            width: 16px;
+        }
+    }
+
+    &__options-list {
+        margin-top: 10px;
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    &___option {
+        user-select: none;
+        font-size: 1.4rem;
+        padding: 10px 20px;
+
+        &--active {
+            font-weight: 500;
+            background-color: rgba($color: #77dae6, $alpha: 0.5);
+        }
+
+        &:not(&--active):hover {
+            cursor: pointer;
+            background-color: #ebebeb;
         }
     }
 
@@ -194,6 +256,7 @@ $error-color: #ed4337;
     }
 
     &__label {
+        user-select: none;
         display: block;
         font-size: 2.2rem;
         font-weight: 500;

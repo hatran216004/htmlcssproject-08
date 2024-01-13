@@ -189,7 +189,8 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 1s 9999s;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: var(--text-color);
+  caret-color: var(--text-color);
 }
 
 a {
@@ -2621,13 +2622,11 @@ img {
   border-radius: 10px;
   border: 1px solid var(--form-text-input-border-color);
 }
-.form__text-area--small, .form__text-input--small {
-  border-radius: 8px;
-}
 .form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
 }
 .form__text-input {
+  position: relative;
   height: 50px;
 }
 .form__text-input--small {
@@ -2637,6 +2636,59 @@ img {
   .form__text-input {
     height: 48px;
   }
+}
+.form__select-dialog {
+  max-height: 300px;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 55px;
+  left: 12px;
+  background-color: var(--modal-bg);
+  border: 1px solid var(--form-text-input-border-color);
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 8px;
+  transition: opacity, visibility, translate;
+  transition-duration: 0.25s;
+}
+.form__select-dialog.show {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}
+.form__search {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--form-text-input-border-color);
+}
+.form__search-input {
+  flex: 1;
+  height: 100%;
+}
+.form__search-icon {
+  width: 16px;
+}
+.form__options-list {
+  margin-top: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+.form___option {
+  user-select: none;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+}
+.form___option--active {
+  font-weight: 500;
+  background-color: rgba(119, 218, 230, 0.5);
+}
+.form___option:not(.form___option--active):hover {
+  cursor: pointer;
+  background-color: #ebebeb;
 }
 .form__text-area {
   height: 100px;
@@ -2719,6 +2771,7 @@ img {
   }
 }
 .form__label {
+  user-select: none;
   display: block;
   font-size: 2.2rem;
   font-weight: 500;
@@ -3053,6 +3106,7 @@ img {
   overflow-y: auto;
 }
 .modal__content {
+  user-select: none;
   position: relative;
   z-index: 1;
   width: min(var(--content-width, 800px), 100% - 40px);
