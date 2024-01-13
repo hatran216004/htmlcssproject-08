@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -423,8 +423,8 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded">
-                                    Continue to checkout
+                                <a href="./payment.html" class="cart-info__next-btn btn btn--primary btn--rounded">
+                                    Continue to payment
                                 </a>
                             </div>
 
@@ -461,12 +461,14 @@
                 <!-- <button class="modal__close js-toggle" toggle-target="#delete-comfirm">&times;</button> -->
                 <p class="modal__text">Are you sure you want to delete item?</p>
                 <div class="modal__bottom">
-                    <button class="btn btn--text modal__btn js-toggle" toggle-target="#delete-comfirm" v>Cancel</button>
+                    <button class="btn btn--text btn--outline modal__btn js-toggle" toggle-target="#delete-comfirm">
+                        Cancel
+                    </button>
                     <button
-                        class="btn btn--primary btn--no-margin modal__btn js-toggle"
+                        class="btn btn--primary btn--danger btn--no-margin modal__btn js-toggle"
                         toggle-target="#delete-comfirm"
                     >
-                        Comfirm
+                        Delete
                     </button>
                 </div>
             </div>
@@ -539,11 +541,10 @@
                         </div>
                         <!-- Form group -->
                         <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City/Town</label>
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
                             <div class="form__text-input">
                                 <input
                                     autocomplete="new-city"
-                                    required
                                     type="text"
                                     name="city"
                                     id="city"
@@ -554,6 +555,7 @@
                                 <!-- <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon--error" /> -->
 
                                 <div id="select-dialog" class="form__select-dialog hide">
+                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
                                     <button
                                         class="form__close-dialog d-none d-sm-block icon js-toggle"
                                         toggle-target="#select-dialog"
