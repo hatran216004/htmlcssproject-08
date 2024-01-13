@@ -75,6 +75,8 @@ html.dark {
     --form-text-input-border-color: #b9babe;
     --form-input-placeholder-color: var(--form-text-input-border-color);
     --form-checkbox-label-color: var(--form-text-input-border-color);
+    --form-select-dialog-bg: var(--modal-bg);
+    --form-select-dialog-option-hover-color: rgba(119, 218, 230, 0.9);
 
     // Product detail
     --product-detail-bg: #292e39;
