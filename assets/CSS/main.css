@@ -3215,6 +3215,100 @@ img {
   }
 }
 
+.payment-card {
+  user-select: none;
+  background-color: var(--bg-color);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.payment-card__img {
+  z-index: -1;
+  top: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.payment-card__top {
+  display: flex;
+  gap: 6px;
+}
+.payment-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.payment-card__number {
+  margin-top: 37px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-card__bottom {
+  margin-top: 20px;
+  display: flex;
+}
+.payment-card__expired {
+  margin: 0 auto 0 40px;
+}
+.payment-card__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 175%;
+}
+.payment-card__value {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.payment-card__circle {
+  --circle-width: 28px;
+  align-self: flex-end;
+  position: relative;
+  width: 42px;
+  height: 28px;
+}
+.payment-card__circle::before, .payment-card__circle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: var(--circle-width);
+  height: var(--circle-width);
+  border-radius: 50%;
+}
+.payment-card__circle::before {
+  background-color: #f94545;
+  z-index: 1;
+  left: 0;
+  mix-blend-mode: hard-light;
+}
+.payment-card__circle::after {
+  background-color: #ffb700;
+  right: 0;
+}
+
+.new-card {
+  border-radius: 10px;
+  border: 1px dashed #d2d1d6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.new-card:hover .new-card__text, .new-card:hover .new-card__icon {
+  opacity: 0.7;
+}
+.new-card__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+
 :root {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(5863%) hue-rotate(212deg) brightness(102%)
@@ -4436,7 +4530,7 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
-  transition: background-color 0.25s;
+  transition: background-color 0.2s;
 }
 .profile-menu__link:hover {
   background-color: #ebebeb;
@@ -4447,6 +4541,24 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.profile-info {
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--checkout-cart-info-bg);
+  box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
+}
+.profile-info__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+.profile-info__desc {
+  margin: 4px 0 16px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
 }
 
 /*# sourceMappingURL=main.css.map */
