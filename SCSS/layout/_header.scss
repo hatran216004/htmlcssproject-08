@@ -8,7 +8,7 @@
 .header {
     position: relative;
     z-index: 2;
-    padding: 30px 0;
+    padding: 20px 0;
     background-color: var(--header-background);
 
     @include abstract.screen(lg) {
@@ -208,10 +208,13 @@
         height: 50px;
         @extend %flex-center;
         justify-content: center;
-        column-gap: 20px;
         border-radius: 8px;
         background: var(--top-act-group-bg);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+
+        &:nth-child(1) .top-act__btn {
+            padding: 13px;
+        }
     }
 
     &__btn-wrap {

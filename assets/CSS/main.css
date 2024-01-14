@@ -1367,7 +1367,7 @@ img {
 .header {
   position: relative;
   z-index: 2;
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: var(--header-background);
 }
 @media (max-width: 991.98px) {
@@ -1556,10 +1556,12 @@ img {
   min-width: 50px;
   height: 50px;
   justify-content: center;
-  column-gap: 20px;
   border-radius: 8px;
   background: var(--top-act-group-bg);
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+}
+.top-act__group:nth-child(1) .top-act__btn {
+  padding: 13px;
 }
 .top-act__btn-wrap {
   position: relative;
@@ -2815,7 +2817,7 @@ img {
   width: 19px;
   height: 19px;
   border-radius: 4px;
-  border: 1.5px solid #b9babe;
+  border: 1px solid #b9babe;
 }
 .form__checkbox:has(:checked)::before {
   background-color: #ffb700;
@@ -3895,6 +3897,11 @@ html.dark {
   font-weight: 700;
   line-height: 141.667%;
 }
+.cart-info__heading--lv2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
@@ -3954,6 +3961,29 @@ html.dark {
 }
 .cart-info__next-btn {
   margin-top: 30px;
+}
+.cart-info__edit-btn {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::after {
+  content: url(../icons/checkbox-uncheck.svg);
+}
+.cart-info__checkbox-input:not(:checked)::after {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::after {
+  content: url(../icons/checkbox-checked.svg);
+}
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cart-info + .cart-info {
@@ -4154,34 +4184,33 @@ html.dark {
   color: #0071dc;
 }
 
-.address-cart {
+.address-card {
   margin-top: 30px;
   display: flex;
   gap: 16px;
 }
 @media (max-width: 767.98px) {
-  .address-cart {
+  .address-card {
     flex-direction: column;
   }
 }
-.address-cart__left {
+.address-card__left {
   flex: 1;
   display: flex;
-  gap: 36px;
+  gap: 16px;
 }
-.address-cart__title {
+.address-card__title {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 144.444%;
 }
-.address-cart__desc {
+.address-card__desc {
   width: min(520px, 90%);
   margin-top: 4px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
 }
-.address-cart__list {
+.address-card__list {
   margin-top: 20px;
   display: flex;
   gap: 30px;
@@ -4191,41 +4220,77 @@ html.dark {
   line-height: 142.857%;
 }
 @media (max-width: 575.98px) {
-  .address-cart__list {
+  .address-card__list {
     flex-direction: column;
     gap: 12px;
   }
 }
-.address-cart__transport {
+.address-card__transport {
   padding-left: 8px;
 }
-.address-cart__control {
+.address-card__control {
   height: 100%;
   display: flex;
   align-items: flex-end;
 }
-.address-cart__control-btn {
+
+.payment-item {
+  margin-top: 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  border-radius: 20px;
+  background: #f6f6f6;
 }
-.address-cart__checkbox {
-  position: relative;
+.payment-item--pointer {
+  cursor: pointer;
 }
-.address-cart__checkbox-input {
-  appearance: none;
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  object-fit: cover;
 }
-.address-cart__checkbox-input::after {
-  content: url(../icons/checkbox-uncheck.svg);
-  position: absolute;
-  top: 8px;
-  left: 0;
+.payment-item__checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 14px;
 }
-.address-cart__checkbox-input:not(:checked)::after {
-  filter: var(--icon-color);
+.payment-item__checkbox-input:checked + .payment-item__cost {
+  color: inherit;
 }
-.address-cart__checkbox-input:checked::after {
-  content: url(../icons/checkbox-checked.svg);
+.payment-item__cost {
+  color: #9e9da8;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-item__content {
+  flex: 1;
+}
+.payment-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-item__view-detail, .payment-item__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.payment-item__view-detail--low, .payment-item__desc--low {
+  color: #9e9da8;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.payment-item__view-detail {
+  padding: 8px;
+  margin: 0 -8px 0 0;
+  color: #0071dc;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */
