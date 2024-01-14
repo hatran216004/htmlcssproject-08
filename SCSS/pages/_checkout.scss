@@ -146,6 +146,17 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__form {
+        margin-bottom: 30px;
+    }
 }
 
 .cart-info + .cart-info {

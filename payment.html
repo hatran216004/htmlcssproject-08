@@ -162,6 +162,116 @@
                                 <p class="cart-info__desc">
                                     Complete your purchase item by providing your payment details order.
                                 </p>
+                                <form action="" class="form cart-info__form">
+                                    <!-- Cart info form payment 1 -->
+                                    <div class="form__group">
+                                        <label for="email-address" class="form__label form__label--medium">
+                                            Email Address
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                required
+                                                type="email"
+                                                name="email-address"
+                                                id="email-address"
+                                                class="form__input"
+                                                placeholder="Email"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon--error"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <!-- Cart info form payment 2 -->
+                                    <div class="form__group">
+                                        <label for="card-holder" class="form__label form__label--medium">
+                                            Card Holder
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                required
+                                                type="text"
+                                                name="card-holder"
+                                                id="card-holder"
+                                                class="form__input"
+                                                placeholder="Card holder"
+                                                minlength="6"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon--error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Use a minimum of 6 characters</p>
+                                    </div>
+
+                                    <!-- Cart info form payment 3 -->
+                                    <div class="form__group">
+                                        <label for="card-detail" class="form__label form__label--medium">
+                                            Card Details
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                required
+                                                type="text"
+                                                name="card-detail"
+                                                id="card-detail"
+                                                class="form__input"
+                                                placeholder="Card Details"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon--error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Use a minimum of 6 characters</p>
+                                    </div>
+
+                                    <div class="form__row">
+                                        <!-- Cart info form payment 4 -->
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    required
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                    class="form__input"
+                                                    placeholder="MM/YY"
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon--error"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <!-- Cart info form payment 5 -->
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    required
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                    class="form__input"
+                                                    placeholder="CVC"
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon--error"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
 
                                 <div class="cart-info__row">
                                     <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
