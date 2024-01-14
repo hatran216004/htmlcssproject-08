@@ -237,7 +237,6 @@ $error-color: #ed4337;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
-        background-color: var(--form-input-bg);
 
         @include abstract.screen(md) {
             font-size: 1.6rem;

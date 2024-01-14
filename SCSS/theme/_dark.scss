@@ -71,7 +71,6 @@ html.dark {
     --auth-intro-text-color: #b9babe;
 
     //Form
-    --form-input-bg: #2f3441;
     --form-text-input-border-color: #b9babe;
     --form-input-placeholder-color: var(--form-text-input-border-color);
     --form-checkbox-label-color: var(--form-text-input-border-color);
@@ -102,6 +101,8 @@ html.dark {
     --checkout-cart-item-border: #292e39;
     --checkout-cart-info-bg: #171c28;
     --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
+    --checkout-payment-item-bg: #292e39;
+    --checkout-view-detail-color: #97c7f5;
 
     // Gift item
     --gift-item-thumb-wrap-bg: #292e39;
