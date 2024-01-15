@@ -227,6 +227,12 @@ img {
   user-select: none;
 }
 
+.separate {
+  margin: var(--margin) 0;
+  height: 1px;
+  background-color: #d2d1d6;
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -3255,12 +3261,12 @@ img {
   margin: 0 auto 0 40px;
 }
 .payment-card__label {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 500;
   line-height: 175%;
 }
 .payment-card__value {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 140%;
 }
@@ -3307,6 +3313,61 @@ img {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 142.857%;
+}
+
+.account-info {
+  border-radius: 10px;
+  background: #f6f6f6;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.account-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.account-info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.account-info__desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
+.favorite-item {
+  display: flex;
+  gap: 20px;
+}
+.favorite-item__thumb {
+  width: 150px;
+  height: 108px;
+  object-fit: contain;
+}
+.favorite-item__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.favorite-item__content {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.favorite-item__price {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
 }
 
 :root {
