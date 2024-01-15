@@ -9,7 +9,7 @@ html.dark {
     --header-background: #171c28;
     --top-act-group-bg: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-    --top-act-separate: #ededf6;
+    --top-act-separate: #545458;
 
     @include abstract.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
