@@ -1615,6 +1615,21 @@ img {
   border-radius: 8px;
   box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdow {
+  visibility: visible;
+  opacity: 1;
+}
+.top-act__dropdow {
+  right: -15px !important;
+  width: min(300px, 100vw) !important;
+}
+.top-act__dropdow-arrow {
+  right: 15px !important;
+  top: -15px !important;
+}
 
 .nav-btn {
   height: 50px;
@@ -1752,6 +1767,37 @@ img {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #bfecf7;
+}
+.user-menu__name {
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0 10px 10px;
+  font-size: 1.6rem;
+  border-radius: 6px;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
 }
 
 .footer {
@@ -3409,6 +3455,154 @@ img {
   line-height: 145.455%;
 }
 
+.themes {
+  margin-left: auto;
+}
+
+.switch {
+  position: relative;
+  width: 70px;
+  height: 32px;
+  margin: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgb(4, 52, 73);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  transition: background-image 0.7s ease-in-out;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.switch:checked {
+  background-color: rgb(0, 195, 255);
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+}
+
+.switch:after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  transform: translateX(0px);
+  animation: off 0.7s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes off {
+  0% {
+    transform: translateX(80px);
+    width: 24px;
+  }
+  50% {
+    width: 36px;
+    border-radius: 25px;
+  }
+  100% {
+    transform: translateX(0px);
+    width: 24px;
+  }
+}
+.switch:checked:after {
+  animation: on 0.7s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes on {
+  0% {
+    transform: translateX(0px);
+    width: 24px;
+  }
+  50% {
+    width: 36px;
+    border-radius: 25px;
+  }
+  100% {
+    transform: translateX(80px);
+    width: 24px;
+  }
+}
+.switch:checked:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  transform-origin: 53px 10px;
+  background-color: transparent;
+  box-shadow: 5px -1px 0px #fff;
+  filter: blur(0px);
+  animation: sun 0.7s forwards ease;
+}
+
+@keyframes sun {
+  0% {
+    transform: rotate(170deg);
+    background-color: transparent;
+    box-shadow: 5px -1px 0px #fff;
+    filter: blur(0px);
+  }
+  50% {
+    background-color: transparent;
+    box-shadow: 5px -1px 0px #fff;
+    filter: blur(0px);
+  }
+  90% {
+    background-color: #f5daaa;
+    box-shadow: 0px 0px 10px #f5deb4, 0px 0px 20px #f5deb4, 0px 0px 30px #f5deb4, inset 0px 0px 2px #efd3a3;
+    filter: blur(1px);
+  }
+  100% {
+    transform: rotate(0deg);
+    background-color: #f5daaa;
+    box-shadow: 0px 0px 10px #f5deb4, 0px 0px 20px #f5deb4, 0px 0px 30px #f5deb4, inset 0px 0px 2px #efd3a3;
+    filter: blur(1px);
+  }
+}
+.switch:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: -34px;
+  top: 5px;
+  filter: blur(1px);
+  background-color: #f5daaa;
+  box-shadow: 0px 0px 10px #f5deb4, 0px 0px 20px #f5deb4, 0px 0px 30px #f5deb4, inset 0px 0px 2px #efd3a3;
+  transform-origin: 53px 10px;
+  animation: moon 0.7s forwards ease;
+}
+
+@keyframes moon {
+  0% {
+    transform: rotate(0deg);
+    filter: blur(1px);
+  }
+  50% {
+    filter: blur(1px);
+  }
+  90% {
+    background-color: transparent;
+    box-shadow: 5px -1px 0px #fff;
+    filter: blur(0px);
+  }
+  100% {
+    transform: rotate(170deg);
+    background-color: transparent;
+    box-shadow: 5px -1px 0px #fff;
+    filter: blur(0px);
+  }
+}
 :root {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(5863%) hue-rotate(212deg) brightness(102%)
