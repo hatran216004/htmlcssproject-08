@@ -1,9 +1,4 @@
 .form-card {
-    &:has(:invalid) &__submit:hover {
-        pointer-events: none;
-        translate: 0 -150%;
-    }
-
     &__label {
         margin-bottom: 10px;
     }

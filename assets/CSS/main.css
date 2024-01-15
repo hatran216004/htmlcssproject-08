@@ -4702,10 +4702,6 @@ html.dark ::-webkit-calendar-picker-indicator {
   line-height: 146.667%;
 }
 
-.form-card:has(:invalid) .form-card__submit:hover {
-  pointer-events: none;
-  translate: 0 -150%;
-}
 .form-card__label {
   margin-bottom: 10px;
 }
